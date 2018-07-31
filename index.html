@@ -56,8 +56,8 @@
 		<div class="topbar">
 			<a class="logo"><i class="fa fa-edit"></i></a>
 			<nav class="nav-menu">
-				<!-- data-val refers to balloon content on .popdown -->
-				<a data-val="" class="nav-item">inventori</a>
+				<!-- data-val refers to content on .popdown -->
+				<a data-val="inventori" class="nav-item">inventori</a>
 				<a data-val="pembelian" class="nav-item">pembelian</a>
 				<a data-val="penjualan" class="nav-item">penjualan</a>
 				<a data-val="keuangan" class="nav-item">keuangan</a>
@@ -65,7 +65,10 @@
 		</div>
 		<div class="clear"></div>
 
-		<!-- .popdown shows content which id is the same as .topnav's data-val -->
+		<!-- .popdown shows content which id is the same as .nav-menu's data-val -->
+		<ul id="inventori">
+			
+		</ul>
 		<ul id="pembelian" class="popdown">
 			<li>
 				<a href="">
