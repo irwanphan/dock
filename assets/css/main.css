@@ -131,10 +131,16 @@ body {
         width: auto;
         display: inline-block; }
         body header ul.popdown li a {
-          font-size: 12px; }
+          max-width: 90px;
+          display: inline-block;
+          vertical-align: top;
+          padding: 0 8px; }
           body header ul.popdown li a i.material-icons {
             display: block;
             text-align: center; }
+          body header ul.popdown li a small {
+            text-align: center;
+            display: block; }
     body header .screenout {
       display: none;
       z-index: 7; }
