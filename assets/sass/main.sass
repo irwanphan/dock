@@ -49,7 +49,7 @@ $complementer-color: $green
 	box-sizing: border-box
 html, body
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0)
-	font-family: "segoe UI", "open sans", arial, sans-serif
+	font-family: roboto, "segoe UI", "open sans", arial, sans-serif
 a
 	text-decoration: none
 	color: inherit
@@ -105,6 +105,8 @@ body
 			display: block
 			top: 0
 			z-index: 0
+			@media (min-width: 721px)
+				padding-left: 8px
 			.logo
 				@include squareicon(44px)
 				position: absolute
@@ -118,24 +120,31 @@ body
 					height: 44px
 					padding: 0 8px
 					display: inline-block
-		.popdown
-			color: $grey
+					font-weight: 500
+		ul.popdown
+			color: $blue
 			display: none
+			margin: 0
 			padding: 16px
-			right: 6px
+			left: 0
 			z-index: 8
 			@include transitions(.3s)
 			&.show
 				display: block
 				position: absolute
 				top: 44px
-				background-color: $white
-				border: 1px solid $grey-light
+				width: 100%
+				background-color: lighten($blue, 35%)
+				border-bottom: 1px solid $blue
 				@include borderradius(3px)
-			@media (min-width: 641px)
-				width: 300px
-			@media (max-width: 640px)
-				left: 6px
+			li
+				width: auto
+				display: inline-block
+				a
+					font-size: 12px
+					i.material-icons
+						display: block
+						text-align: center
 		.screenout
 			display: none
 			z-index: 7

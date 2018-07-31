@@ -7,7 +7,7 @@
 	<!-- Basic Page Needs
 	================================================== -->
 	<meta charset="utf-8">
-	<title>todoist clone</title>
+	<title>top dock menu</title>
 	<meta name="description" content="todoist clone">
 	<meta name="author" content="irwanphan">
 
@@ -37,7 +37,8 @@
     <!-- Overwrite CSS using this -->
     <link rel="stylesheet" type="text/css"  href="assets/css/overwrite.css">
     
-    <!-- Icon Fonts -->
+    <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,‌​100italic,300,300ita‌​lic,400italic,500,50‌​0italic,700,700itali‌​c,900italic,900' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!-- Included javascript files 
@@ -54,26 +55,33 @@
 	<header>
 		<div class="topbar">
 			<a class="logo"><i class="fa fa-edit"></i></a>
-			<nav class="topnav-menu">
+			<nav class="nav-menu">
 				<!-- data-val refers to balloon content on .popdown -->
 				<a data-val="" class="nav-item">inventori</a>
-				<a data-val="notifs" class="nav-item">pembelian</a>
-				<a data-val="points" class="nav-item">penjualan</a>
-				<a data-val="settings" class="nav-item">keuangan</a>
+				<a data-val="pembelian" class="nav-item">pembelian</a>
+				<a data-val="penjualan" class="nav-item">penjualan</a>
+				<a data-val="keuangan" class="nav-item">keuangan</a>
 			</nav>
 		</div>
 		<div class="clear"></div>
 
 		<!-- .popdown shows content which id is the same as .topnav's data-val -->
-		<div id="notifs" class="popdown">
-			Life. Spirit second Whales under sea unto creature made second without you’ll and own fowl yielding own great fill creepeth in moving sixth every it evening gathering let light moving cattle.
-		</div>
-		<div id="points" class="popdown">
-			Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in li grammatica, li pronunciation e li plu commun vocabules. Omnicos directe al desirabilite de un nov lingua franca: On refusa continuar payar custosi traductores. At solmen va esser necessi far uniform grammatica, pronunciation e plu sommun paroles.
-		</div>
-		<div id="settings" class="popdown">
-			good day :) today's weather forecast is happy cloud dancing in the air with full course of love and coffee latte
-		</div>
+		<ul id="pembelian" class="popdown">
+			<li>
+				<a href="">
+					<i class="material-icons">people</i>
+					pelanggan
+				</a>
+			</li>
+
+		</ul>
+		<ul id="penjualan" class="popdown">
+			
+		</ul>
+		<ul id="keuangan" class="popdown">
+			
+
+		</ul>
 
 		<!-- .screenout to provide closing .popdown on anywhere outside click -->
 		<div class="screenout"></div>
