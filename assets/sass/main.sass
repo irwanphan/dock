@@ -1,24 +1,24 @@
 // transitions & styling
 $browsers: '', '-o-', '-ms-', '-moz-', '-webkit-'
-@mixin transitions ($sec)
+=transitions ($sec)
 	@each $browser in $browsers
 		#{$browser}transition: all $sec ease
-@mixin borderradius ($radius: 50%)
+=borderradius ($radius: 50%)
 	@each $browser in $browsers
 		#{$browser}border-radius: $radius
-@mixin squareicon ($size)
+=squareicon ($size)
 	width: $size
 	height: $size
 	line-height: $size
 	text-align: center
-@mixin clearfix
+=clearfix
 	content: ""
 	display: block
 	clear: both
 // set base container
 // responsive setting
 $responsive: true
-@mixin container($container-width: $width)
+=container($container-width: $width)
 	// set container width if responsive, else if not
 	@if $responsive == true
 		max-width: $container-width
@@ -56,14 +56,14 @@ a
 	&:hover, &:active, &:focus, &:visited
 		color: inherit
 	&.round-button
-		@include borderradius(50%)
+		+borderradius(50%)
 		display: block
 		background-color: $white-min
 ul
 	list-style: none
 	padding-left: 0
 ul, li, a, input, input ~ label, button
-	@include transitions(.3s)
+	+transitions(.3s)
 input[type="radio"], input[type="checkbox"], a
 	cursor: pointer
 	& ~ label
@@ -72,15 +72,15 @@ input[type="radio"], input[type="checkbox"], a
 	visibility: hidden
 	display: none
 .clear
-	@include clearfix
+	+clearfix
 .right
 	float: right
 .container-fluid
 	width: 100%
 .container
-	@include container(1020px)
+	+container(1020px)
 .button
-	@include borderradius(5px)
+	+borderradius(5px)
 	text-align: center
 	display: block
 	// padding: 8px
@@ -94,6 +94,7 @@ input[type="radio"], input[type="checkbox"], a
 
 body
 	margin: 0
+	background-color: $grey
 	header
 		position: relative
 		.topbar
@@ -108,7 +109,7 @@ body
 			@media (min-width: 721px)
 				padding-left: 8px
 			.logo
-				@include squareicon(44px)
+				+squareicon(44px)
 				position: absolute
 				font-size: 24px
 				left: 4px
@@ -122,26 +123,26 @@ body
 					display: inline-block
 					font-weight: 500
 		ul.popdown
-			color: $theme
 			position: absolute
 			top: -300px
 			margin: 0
-			padding: 8px 8px 0 8px
+			padding: 8px
 			left: 0
+			width: 100%
 			z-index: 8
-			@include transitions(.3s)
+			+transitions(.3s)
 			&.show
 				position: absolute
 				top: 44px
-				width: 100%
 				background-color: lighten($theme, 35%)
 				border-bottom: 1px solid $theme
-				@include borderradius(3px)
+				+borderradius(3px)
 			li
 				width: auto
 				display: inline-block
 				margin: 8px 0
 				a
+					color: $theme
 					max-width: 90px
 					display: inline-block
 					vertical-align: top
@@ -164,6 +165,9 @@ body
 					small
 						text-align: center
 						display: block
+					&:hover, &:focus, &:active
+						color: darken($theme, 10%)
+
 		.screenout
 			display: none
 			z-index: 7
@@ -174,3 +178,5 @@ body
 				left: 0
 				display: block
 				position: fixed
+	.tab-header
+	.tab-content
