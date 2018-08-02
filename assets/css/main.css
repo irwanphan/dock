@@ -82,7 +82,7 @@ body {
       height: 44px;
       display: block;
       top: 0;
-      z-index: 0; }
+      z-index: 11; }
       @media (min-width: 721px) {
         body header .topbar {
           padding-left: 8px; } }
@@ -105,9 +105,10 @@ body {
           font-weight: 500; }
     body header ul.popdown {
       color: #44a0f8;
-      display: none;
+      position: absolute;
+      top: -300px;
       margin: 0;
-      padding: 16px;
+      padding: 8px 8px 0 8px;
       left: 0;
       z-index: 8;
       transition: all 0.3s ease;
@@ -116,7 +117,6 @@ body {
       -moz-transition: all 0.3s ease;
       -webkit-transition: all 0.3s ease; }
       body header ul.popdown.show {
-        display: block;
         position: absolute;
         top: 44px;
         width: 100%;
@@ -129,7 +129,8 @@ body {
         -webkit-border-radius: 3px; }
       body header ul.popdown li {
         width: auto;
-        display: inline-block; }
+        display: inline-block;
+        margin: 8px 0; }
         body header ul.popdown li a {
           max-width: 90px;
           display: inline-block;

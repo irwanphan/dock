@@ -104,7 +104,7 @@ body
 			height: 44px
 			display: block
 			top: 0
-			z-index: 0
+			z-index: 11
 			@media (min-width: 721px)
 				padding-left: 8px
 			.logo
@@ -123,14 +123,14 @@ body
 					font-weight: 500
 		ul.popdown
 			color: $theme
-			display: none
+			position: absolute
+			top: -300px
 			margin: 0
-			padding: 16px
+			padding: 8px 8px 0 8px
 			left: 0
 			z-index: 8
 			@include transitions(.3s)
 			&.show
-				display: block
 				position: absolute
 				top: 44px
 				width: 100%
@@ -140,6 +140,7 @@ body
 			li
 				width: auto
 				display: inline-block
+				margin: 8px 0
 				a
 					max-width: 90px
 					display: inline-block
