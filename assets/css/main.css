@@ -135,9 +135,21 @@ body {
           display: inline-block;
           vertical-align: top;
           padding: 0 8px; }
-          body header ul.popdown li a i.material-icons {
+          body header ul.popdown li a i {
             display: block;
-            text-align: center; }
+            text-align: center;
+            font-family: "Material Icons";
+            font-weight: normal;
+            font-style: normal;
+            font-size: 30px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -moz-font-feature-settings: "liga";
+            -moz-osx-font-smoothing: grayscale; }
           body header ul.popdown li a small {
             text-align: center;
             display: block; }
