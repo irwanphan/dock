@@ -99,6 +99,18 @@ input[type="radio"], input[type="checkbox"], a
 			color: $theme
 			background-color: lighten($theme, 25%)
 
+.columns
+	display: flex
+	&-4
+		+columns()
+	&-3
+		+columns(3)
+	.column
+		display: block
+		flex-basis: 0
+		flex-grow: 1
+		flex-shrink: 1
+		
 body
 	margin: 0
 	background-color: $grey
@@ -241,14 +253,3 @@ body
 			&.show
 				display: block
 
-.columns
-	display: flex
-	&-4
-		+columns()
-	&-3
-		+columns(3)
-	.column
-		display: block
-		flex-basis: 0
-		flex-grow: 1
-		flex-shrink: 1
