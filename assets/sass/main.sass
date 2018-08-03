@@ -6,6 +6,9 @@ $browsers: '', '-o-', '-ms-', '-moz-', '-webkit-'
 =borderradius ($radius: 50%)
 	@each $browser in $browsers
 		#{$browser}border-radius: $radius
+// =transform ($type, $value)
+// 	@each $browser in $browsers
+// 		#{$browser}transform: #{$type}(#{$value})
 =squareicon ($size)
 	width: $size
 	height: $size
@@ -178,5 +181,56 @@ body
 				left: 0
 				display: block
 				position: fixed
-	.tab-header
+	ul.tab-header
+		margin: 0
+		position: absolute
+		top: 48px
+		left: 0
+		right: 0
+		padding: 0 16px
+		li
+			background-color: $grey-light
+			display: inline-block
+			line-height: 32px
+			padding: 0 8px
+			cursor: pointer
+			position: relative
+			+transitions(.3s)
+			+borderradius(3px 2px 0 0)
+			&.selected
+				background-color: $white-min
+				&::before
+					background-color: $white-min
+					z-index: 1
+			&::before
+				border-top-right-radius: 3px
+				border-right-style: solid
+				border-right-width: 1px
+				border-top-style: solid
+				border-top-width: 1px
+				border-right-color: transparent
+				border-top-color: transparent
+				content: " "
+				display: block
+				height: 32px
+				position: absolute
+				right: -5px
+				width: 10px
+				z-index: -1
+				// +transform(skewX, 18deg)
+				-webkit-transform: skewX(18deg)
+				-moz-transform: skewX(18deg)
+				-ms-transform: skewX(18deg)
+				transform: skewX(18deg)
+				background-color: $grey-light
 	.tab-content
+		.tab
+			display: none
+			position: absolute
+			top: 80px
+			left: 0
+			right: 0
+			bottom: 44px
+			background-color: $white-min
+			&.show
+				display: block
