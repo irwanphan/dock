@@ -1,4 +1,5 @@
 $(document).ready(function () {
+	// main ribbon menu
 	$( '.nav-item' ).click( function(){
 		var which = $(this).data('val');
 		if ( !$('.screenout').hasClass('show') )
@@ -14,5 +15,17 @@ $(document).ready(function () {
 	$( '.screenout' ).click( function(){
 		$('.popdown').removeClass( 'show' )
 		$('.screenout').removeClass( 'show' )
+	});
+
+	// tab option
+	$( '.tab-header li' ).click( function(){
+		var which = $(this).data('target');
+		if ( !$('#'+which).hasClass( 'show' ) )
+		{
+			$( '.tab-header li' ).removeClass( 'selected' )
+			$(this).addClass( 'selected' )
+			$( '.tab-content .tab' ).removeClass( 'show' )
+			$('#'+which).addClass( 'show' )
+		}
 	});
 });

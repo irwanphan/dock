@@ -9,6 +9,10 @@ $browsers: '', '-o-', '-ms-', '-moz-', '-webkit-'
 // =transform ($type, $value)
 // 	@each $browser in $browsers
 // 		#{$browser}transform: #{$type}(#{$value})
+=columns ($columns: 4, $gap: 16px)
+	@each $browser in $browsers
+		#{$browser}column-count: $columns
+		#{$browser}column-gap: $gap
 =squareicon ($size)
 	width: $size
 	height: $size
@@ -196,14 +200,14 @@ body
 			cursor: pointer
 			position: relative
 			+transitions(.3s)
-			+borderradius(3px 2px 0 0)
+			+borderradius(4px 2px 0 0)
 			&.selected
 				background-color: $white-min
 				&::before
 					background-color: $white-min
 					z-index: 1
 			&::before
-				border-top-right-radius: 3px
+				+borderradius(0 2px 0 0)
 				border-right-style: solid
 				border-right-width: 1px
 				border-top-style: solid
@@ -224,13 +228,27 @@ body
 				transform: skewX(18deg)
 				background-color: $grey-light
 	.tab-content
+		position: absolute
+		top: 80px
+		left: 0
+		right: 0
+		bottom: 44px
+		background-color: $white-min
+		padding: 16px
+		overflow-y: auto
 		.tab
 			display: none
-			position: absolute
-			top: 80px
-			left: 0
-			right: 0
-			bottom: 44px
-			background-color: $white-min
 			&.show
 				display: block
+
+.columns
+	display: flex
+	&-4
+		+columns()
+	&-3
+		+columns(3)
+	.column
+		display: block
+		flex-basis: 0
+		flex-grow: 1
+		flex-shrink: 1
