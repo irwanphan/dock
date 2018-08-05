@@ -32,6 +32,16 @@ $(document).ready(function () {
 	// add a close button to every tab header
 	$( '.tab-header li' ).append( '<i>cancel</i>' );
 
+	// add a new tab from input_pemaok
+	$( 'button' ).click(function(){
+		var which = $(this).data('target');
+		var str = $(this).text();
+		$( '.tab-header li' ).removeClass( 'selected' );
+		$( '.tab-header' ).append( '<li class="selected" data-target="'+which+'">'+str+'<i>cancel</i></li>' );
+		$( '.tab-content > .tab' ).removeClass( 'show' );
+		$( '.tab-content' ).append( '<div class="tab show" id="'+which+'">qwertyuiop</div>' );
+	});
+	
 	// close a tab, if the tab was selected, select previous tab
 	$( '.tab-header li > i' ).click( function(){
 		var which = $(this).parent().data('target');
@@ -57,13 +67,5 @@ $(document).ready(function () {
 		}
 	});
 
-	// add a new tab from input_pemaok
-	$( 'button' ).click(function(){
-		var which = $(this).data('target');
-		var str = $(this).text();
-		$( '.tab-header li' ).removeClass( 'selected' );
-		$( '.tab-header' ).append( '<li class="selected" data-target="'+which+'">'+str+'</li>' );
-		$( '.tab-content > .tab' ).removeClass( 'show' );
-		$( '.tab-content' ).append( '<div class="tab show" id="'+which+'">qwertyuiop</div>' );
-	});
+	
 });
