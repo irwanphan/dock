@@ -111,22 +111,22 @@ input[type="radio"], input[type="checkbox"], a {
       .columns-1-3 .column.right .tab-sub .tab-sub-header {
         position: relative; }
 
-.form-default {
+.form-default, body .tab-content .tab, body .tab-sub .tab-sub-content .tab {
   font-size: 16px; }
-  .form-default hr {
+  .form-default hr, body .tab-content .tab hr, body .tab-sub .tab-sub-content .tab hr {
     width: 100%;
     border-top: 1px solid #dedede; }
-  .form-default fieldset {
+  .form-default fieldset, body .tab-content .tab fieldset, body .tab-sub .tab-sub-content .tab fieldset {
     width: 100%;
     display: block;
     border: 0;
     padding: 0;
     margin-bottom: 12px; }
-  .form-default > label {
+  .form-default > label, body .tab-content .tab > label, body .tab-sub .tab-sub-content .tab > label {
     display: block;
     text-transform: capitalize;
     line-height: 36px; }
-  .form-default select, .form-default input[type="text"], .form-default input[type="email"], .form-default input[type="number"], .form-default input[type="password"], .form-default input[type="search"], .form-default textarea {
+  .form-default select, body .tab-content .tab select, body .tab-sub .tab-sub-content .tab select, .form-default input[type="text"], body .tab-content .tab input[type="text"], body .tab-sub .tab-sub-content .tab input[type="text"], .form-default input[type="email"], body .tab-content .tab input[type="email"], body .tab-sub .tab-sub-content .tab input[type="email"], .form-default input[type="number"], body .tab-content .tab input[type="number"], body .tab-sub .tab-sub-content .tab input[type="number"], .form-default input[type="password"], body .tab-content .tab input[type="password"], body .tab-sub .tab-sub-content .tab input[type="password"], .form-default input[type="search"], body .tab-content .tab input[type="search"], body .tab-sub .tab-sub-content .tab input[type="search"], .form-default textarea, body .tab-content .tab textarea, body .tab-sub .tab-sub-content .tab textarea {
     border: 1px solid #c5c5c5;
     padding: 6px 12px;
     border-radius: 16px;
@@ -137,9 +137,9 @@ input[type="radio"], input[type="checkbox"], a {
     display: block;
     width: 100%;
     margin-bottom: 6px; }
-    .form-default select:hover, .form-default select:active, .form-default select:focus, .form-default input[type="text"]:hover, .form-default input[type="text"]:active, .form-default input[type="text"]:focus, .form-default input[type="email"]:hover, .form-default input[type="email"]:active, .form-default input[type="email"]:focus, .form-default input[type="number"]:hover, .form-default input[type="number"]:active, .form-default input[type="number"]:focus, .form-default input[type="password"]:hover, .form-default input[type="password"]:active, .form-default input[type="password"]:focus, .form-default input[type="search"]:hover, .form-default input[type="search"]:active, .form-default input[type="search"]:focus, .form-default textarea:hover, .form-default textarea:active, .form-default textarea:focus {
+    .form-default select:hover, body .tab-content .tab select:hover, body .tab-sub .tab-sub-content .tab select:hover, .form-default select:active, body .tab-content .tab select:active, body .tab-sub .tab-sub-content .tab select:active, .form-default select:focus, body .tab-content .tab select:focus, body .tab-sub .tab-sub-content .tab select:focus, .form-default input[type="text"]:hover, body .tab-content .tab input[type="text"]:hover, body .tab-sub .tab-sub-content .tab input[type="text"]:hover, .form-default input[type="text"]:active, body .tab-content .tab input[type="text"]:active, body .tab-sub .tab-sub-content .tab input[type="text"]:active, .form-default input[type="text"]:focus, body .tab-content .tab input[type="text"]:focus, body .tab-sub .tab-sub-content .tab input[type="text"]:focus, .form-default input[type="email"]:hover, body .tab-content .tab input[type="email"]:hover, body .tab-sub .tab-sub-content .tab input[type="email"]:hover, .form-default input[type="email"]:active, body .tab-content .tab input[type="email"]:active, body .tab-sub .tab-sub-content .tab input[type="email"]:active, .form-default input[type="email"]:focus, body .tab-content .tab input[type="email"]:focus, body .tab-sub .tab-sub-content .tab input[type="email"]:focus, .form-default input[type="number"]:hover, body .tab-content .tab input[type="number"]:hover, body .tab-sub .tab-sub-content .tab input[type="number"]:hover, .form-default input[type="number"]:active, body .tab-content .tab input[type="number"]:active, body .tab-sub .tab-sub-content .tab input[type="number"]:active, .form-default input[type="number"]:focus, body .tab-content .tab input[type="number"]:focus, body .tab-sub .tab-sub-content .tab input[type="number"]:focus, .form-default input[type="password"]:hover, body .tab-content .tab input[type="password"]:hover, body .tab-sub .tab-sub-content .tab input[type="password"]:hover, .form-default input[type="password"]:active, body .tab-content .tab input[type="password"]:active, body .tab-sub .tab-sub-content .tab input[type="password"]:active, .form-default input[type="password"]:focus, body .tab-content .tab input[type="password"]:focus, body .tab-sub .tab-sub-content .tab input[type="password"]:focus, .form-default input[type="search"]:hover, body .tab-content .tab input[type="search"]:hover, body .tab-sub .tab-sub-content .tab input[type="search"]:hover, .form-default input[type="search"]:active, body .tab-content .tab input[type="search"]:active, body .tab-sub .tab-sub-content .tab input[type="search"]:active, .form-default input[type="search"]:focus, body .tab-content .tab input[type="search"]:focus, body .tab-sub .tab-sub-content .tab input[type="search"]:focus, .form-default textarea:hover, body .tab-content .tab textarea:hover, body .tab-sub .tab-sub-content .tab textarea:hover, .form-default textarea:active, body .tab-content .tab textarea:active, body .tab-sub .tab-sub-content .tab textarea:active, .form-default textarea:focus, body .tab-content .tab textarea:focus, body .tab-sub .tab-sub-content .tab textarea:focus {
       border-color: #44a0f8; }
-  .form-default textarea {
+  .form-default textarea, body .tab-content .tab textarea, body .tab-sub .tab-sub-content .tab textarea {
     resize: none;
     height: 108px;
     border-radius: 16px;
@@ -149,14 +149,52 @@ input[type="radio"], input[type="checkbox"], a {
     -webkit-border-radius: 16px;
     width: 100%;
     font-family: Roboto, "Segoe UI", "open sans", arial, sans-serif; }
-  .form-default select, .form-default button {
+  .form-default select, body .tab-content .tab select, body .tab-sub .tab-sub-content .tab select, .form-default button, body .tab-content .tab button, body .tab-sub .tab-sub-content .tab button {
     cursor: pointer; }
-  .form-default input[type="submit"], .form-default input[type="reset"], .form-default button {
+  .form-default button, body .tab-content .tab button, body .tab-sub .tab-sub-content .tab button {
+    border-radius: 16px;
+    -o-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -webkit-border-radius: 16px;
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+    -o-box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+    -ms-box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+    -moz-box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+    -webkit-box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+    float: right;
+    margin-left: 8px;
+    color: #fff;
+    padding: 4px 16px;
+    background-color: #5dacf9; }
+    .form-default button i, body .tab-content .tab button i, body .tab-sub .tab-sub-content .tab button i {
+      text-align: center;
+      font-family: "Material Icons";
+      font-weight: normal;
+      font-style: normal;
+      line-height: 1;
+      letter-spacing: normal;
+      text-transform: none;
+      white-space: nowrap;
+      word-wrap: normal;
+      direction: ltr;
+      -moz-font-feature-settings: "liga";
+      -moz-osx-font-smoothing: grayscale;
+      line-height: 24px;
+      float: left;
+      margin-right: 4px; }
+    .form-default button:hover, body .tab-content .tab button:hover, body .tab-sub .tab-sub-content .tab button:hover, .form-default button:active, body .tab-content .tab button:active, body .tab-sub .tab-sub-content .tab button:active, .form-default button:focus, body .tab-content .tab button:focus, body .tab-sub .tab-sub-content .tab button:focus {
+      background-color: #2b94f7; }
+    .form-default button.cancel, body .tab-content .tab button.cancel, body .tab-sub .tab-sub-content .tab button.cancel {
+      background-color: #f9ac5d; }
+      .form-default button.cancel:hover, body .tab-content .tab button.cancel:hover, body .tab-sub .tab-sub-content .tab button.cancel:hover {
+        background-color: #f7942b; }
+  .form-default input[type="submit"], body .tab-content .tab input[type="submit"], body .tab-sub .tab-sub-content .tab input[type="submit"], .form-default input[type="reset"], body .tab-content .tab input[type="reset"], body .tab-sub .tab-sub-content .tab input[type="reset"], .form-default button, body .tab-content .tab button, body .tab-sub .tab-sub-content .tab button {
     display: inline-block;
     border: 0;
     padding: 5px 8px;
     font-size: 16px; }
-  .form-default input[type=number]::-webkit-inner-spin-button {
+  .form-default input[type=number]::-webkit-inner-spin-button, body .tab-content .tab input[type=number]::-webkit-inner-spin-button, body .tab-sub .tab-sub-content .tab input[type=number]::-webkit-inner-spin-button {
     -webkit-appearance: none;
     cursor: pointer;
     display: block;
@@ -164,24 +202,30 @@ input[type="radio"], input[type="checkbox"], a {
     color: #333;
     text-align: center;
     position: relative; }
-  .form-default input[type=number] {
+  .form-default input[type=number], body .tab-content .tab input[type=number], body .tab-sub .tab-sub-content .tab input[type=number] {
     -moz-appearance: textfield; }
-  .form-default small {
+  .form-default small, body .tab-content .tab small, body .tab-sub .tab-sub-content .tab small {
     font-size: 12px;
     text-transform: uppercase;
     display: block;
     line-height: 16px;
     margin: -8px 0 8px;
     color: #888; }
-  .form-default .button.form {
+  .form-default .button.form, body .tab-content .tab .button.form, body .tab-sub .tab-sub-content .tab .button.form {
     width: 100%;
     margin: 8px 0; }
-  .form-default span.info {
+  .form-default span.info, body .tab-content .tab span.info, body .tab-sub .tab-sub-content .tab span.info {
     display: block;
     font-weight: 500;
     line-height: 28px; }
-    .form-default span.info:last-child {
+    .form-default span.info:last-child, body .tab-content .tab span.info:last-child, body .tab-sub .tab-sub-content .tab span.info:last-child {
       margin-bottom: 12px; }
+
+.fab {
+  text-align: right;
+  position: fixed;
+  bottom: 16px;
+  right: 32px; }
 
 body {
   margin: 0;
@@ -393,50 +437,5 @@ body {
     body .tab-sub .tab-sub-content {
       top: 34px;
       overflow-y: visible; }
-
-.fab {
-  text-align: right;
-  position: fixed;
-  bottom: 16px;
-  right: 32px; }
-
-.form-default button {
-  border-radius: 16px;
-  -o-border-radius: 16px;
-  -ms-border-radius: 16px;
-  -moz-border-radius: 16px;
-  -webkit-border-radius: 16px;
-  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
-  -o-box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
-  -ms-box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
-  -moz-box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
-  -webkit-box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
-  float: right;
-  margin-left: 8px;
-  color: #fff;
-  padding: 4px 16px;
-  background-color: #5dacf9; }
-  .form-default button i {
-    text-align: center;
-    font-family: "Material Icons";
-    font-weight: normal;
-    font-style: normal;
-    line-height: 1;
-    letter-spacing: normal;
-    text-transform: none;
-    white-space: nowrap;
-    word-wrap: normal;
-    direction: ltr;
-    -moz-font-feature-settings: "liga";
-    -moz-osx-font-smoothing: grayscale;
-    line-height: 24px;
-    float: left;
-    margin-right: 4px; }
-  .form-default button:hover, .form-default button:active, .form-default button:focus {
-    background-color: #2b94f7; }
-  .form-default button.cancel {
-    background-color: #f9ac5d; }
-    .form-default button.cancel:hover {
-      background-color: #f7942b; }
 
 /*# sourceMappingURL=main.css.map */

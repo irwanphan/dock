@@ -179,6 +179,25 @@ input[type="radio"], input[type="checkbox"], a
 		font-family: $font-family
 	select, button
 		cursor: pointer
+	button
+		+borderradius(16px)
+		+shadow
+		float: right
+		margin-left: 8px
+		color: $white
+		padding: 4px 16px
+		background-color: lighten($theme, 5%)
+		i
+			+materialicons
+			line-height: 24px
+			float: left
+			margin-right: 4px 
+		&:hover, &:active, &:focus
+			background-color: darken($theme, 5%)
+		&.cancel
+			background-color: lighten($cancel, 5%)
+			&:hover
+				background-color: darken($cancel, 5%)
 	input[type="submit"], input[type="reset"], button
 		display: inline-block
 		border: 0
@@ -209,7 +228,12 @@ input[type="radio"], input[type="checkbox"], a
 		font-weight: 500
 		line-height: 28px
 		&:last-child
-			margin-bottom: 12px		
+			margin-bottom: 12px
+.fab
+	text-align: right
+	position: fixed
+	bottom: 16px
+	right: 32px	
 body
 	margin: 0
 	background-color: $grey
@@ -348,6 +372,7 @@ body
 		.tab
 			display: none
 			padding-bottom: 64px
+			@extend .form-default
 			&.show
 				display: block
 	.tab-sub
@@ -370,29 +395,6 @@ body
 			@extend .tab-content
 			top: 34px
 			overflow-y: visible
-.fab
-	text-align: right
-	position: fixed
-	bottom: 16px
-	right: 32px
-.form-default
-	button
-		+borderradius(16px)
-		+shadow
-		float: right
-		margin-left: 8px
-		color: $white
-		padding: 4px 16px
-		background-color: lighten($theme, 5%)
-		i
-			+materialicons
-			line-height: 24px
-			float: left
-			margin-right: 4px 
-		&:hover, &:active, &:focus
-			background-color: darken($theme, 5%)
-		&.cancel
-			background-color: lighten($cancel, 5%)
-			&:hover
-				background-color: darken($cancel, 5%)
+
+	
 				

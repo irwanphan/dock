@@ -57,4 +57,13 @@ $(document).ready(function () {
 		}
 	});
 
+	// add a new tab from input_pemaok
+	$( 'button' ).click(function(){
+		var which = $(this).data('target');
+		var str = $(this).text();
+		$( '.tab-header li' ).removeClass( 'selected' );
+		$( '.tab-header' ).append( '<li class="selected" data-target="'+which+'">'+str+'</li>' );
+		$( '.tab-content > .tab' ).removeClass( 'show' );
+		$( '.tab-content' ).append( '<div class="tab show" id="'+which+'">qwertyuiop</div>' );
+	});
 });

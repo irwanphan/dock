@@ -212,6 +212,9 @@
 	</header>
 
 	<ul class="tab-header">
+		<li class="" data-target="daftar_pemasok">
+			daftar pemasok
+		</li>
 		<li class="selected" data-target="input_pemasok">
 			input pemasok
 		</li>
@@ -224,7 +227,11 @@
 	</ul>
 
 	<div class="tab-content">
-		<div class="tab show form-default" id="input_pemasok">
+		<div class="tab" id="daftar_pemasok">
+			<button data-target="pemasok_baru">input pemasok</button>
+			<button>cetak</button>
+		</div>
+		<div class="tab show" id="input_pemasok">
 			<fieldset>
 				<small>kode pemasok</small>
 				<input type="text" class="" name="" placeholder="Kode pemasok">
@@ -287,7 +294,7 @@
 				</button>
 			</div>
 		</div>
-		<div class="tab form-default columns-1-3" id="input_pemasok_2">
+		<div class="tab columns-1-3" id="input_pemasok_2">
 			<div class="column left">
 				<fieldset>
 					<small>kode pemasok</small>
