@@ -51,12 +51,15 @@ $maroon: #db4c3f
 $theme: $blue
 $complementer-color: $green
 
+// font
+$font-family: Roboto, "Segoe UI", "open sans", arial, sans-serif
+
 // default styling
 *, *:before, *:after
 	box-sizing: border-box
 html, body
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0)
-	font-family: roboto, "segoe UI", "open sans", arial, sans-serif
+	font-family: $font-family
 a
 	text-decoration: none
 	color: inherit
@@ -85,7 +88,8 @@ input[type="radio"], input[type="checkbox"], a
 .container-fluid
 	width: 100%
 .container
-	+container(1020px)
+	// +container(1020px)
+	position: relative
 .button
 	+borderradius(5px)
 	text-align: center
@@ -110,7 +114,73 @@ input[type="radio"], input[type="checkbox"], a
 		flex-basis: 0
 		flex-grow: 1
 		flex-shrink: 1
-		
+// form styling
+.form-default
+	font-size: 16px
+	hr
+		width: 100%
+		border-top: 1px solid $grey-light
+	fieldset
+		width: 100%
+		display: block
+		border: 0
+		padding: 0
+		margin-bottom: 12px
+	> label
+		display: block
+		// vertical-align: top
+		text-transform: capitalize
+		line-height: 36px
+	select, input[type="text"], input[type="email"], input[type="number"], input[type="password"], input[type="search"], textarea
+		border: 1px solid darken($grey-light, 10%)
+		padding: 6px 12px
+		+borderradius(16px)
+		display: block
+		width: 100%
+		margin-bottom: 6px
+		&:hover, &:active, &:focus
+			border-color: $theme
+	textarea
+		resize: none
+		height: 108px
+		+borderradius(16px)
+		width: 100%
+		font-family: $font-family
+	select
+		cursor: pointer
+	select.multiple
+		height: auto
+	input[type="submit"], input[type="reset"], button
+		display: inline-block
+		border: 0
+		padding: 5px 8px
+		font-size: 16px
+	input[type=number]::-webkit-inner-spin-button
+		-webkit-appearance: none
+		cursor: pointer
+		display: block
+		width: 8px
+		color: #333
+		text-align: center
+		position: relative
+	input[type=number]
+		-moz-appearance: textfield
+	small
+		font-size: 12px
+		text-transform: uppercase
+		display: block
+		line-height: 16px
+		margin: -8px 0 8px
+		color: $grey
+	.button.form
+		width: 100%
+		margin: 8px 0
+	span.info
+		display: block
+		font-weight: 500
+		line-height: 28px
+		&:last-child
+			margin-bottom: 12px		
 body
 	margin: 0
 	background-color: $grey
@@ -252,4 +322,12 @@ body
 			display: none
 			&.show
 				display: block
-
+	.tab-sub
+		position: relative
+		width: 100%
+		.tab-sub-header
+			@extend ul.tab-header
+			top: 0
+		.tab-sub-content
+			@extend .tab-content
+			top: 32px

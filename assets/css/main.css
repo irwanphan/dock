@@ -3,7 +3,7 @@
 
 html, body {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  font-family: roboto, "segoe UI", "open sans", arial, sans-serif; }
+  font-family: Roboto, "Segoe UI", "open sans", arial, sans-serif; }
 
 a {
   text-decoration: none;
@@ -51,8 +51,7 @@ input[type="radio"], input[type="checkbox"], a {
   width: 100%; }
 
 .container {
-  max-width: 1020px;
-  margin: 0px auto; }
+  position: relative; }
 
 .button {
   border-radius: 5px;
@@ -99,6 +98,80 @@ input[type="radio"], input[type="checkbox"], a {
     flex-basis: 0;
     flex-grow: 1;
     flex-shrink: 1; }
+
+.form-default {
+  font-size: 16px; }
+  .form-default hr {
+    width: 100%;
+    border-top: 1px solid #dedede; }
+  .form-default fieldset {
+    width: 100%;
+    display: block;
+    border: 0;
+    padding: 0;
+    margin-bottom: 12px; }
+  .form-default > label {
+    display: block;
+    text-transform: capitalize;
+    line-height: 36px; }
+  .form-default select, .form-default input[type="text"], .form-default input[type="email"], .form-default input[type="number"], .form-default input[type="password"], .form-default input[type="search"], .form-default textarea {
+    border: 1px solid #c5c5c5;
+    padding: 6px 12px;
+    border-radius: 16px;
+    -o-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -webkit-border-radius: 16px;
+    display: block;
+    width: 100%;
+    margin-bottom: 6px; }
+    .form-default select:hover, .form-default select:active, .form-default select:focus, .form-default input[type="text"]:hover, .form-default input[type="text"]:active, .form-default input[type="text"]:focus, .form-default input[type="email"]:hover, .form-default input[type="email"]:active, .form-default input[type="email"]:focus, .form-default input[type="number"]:hover, .form-default input[type="number"]:active, .form-default input[type="number"]:focus, .form-default input[type="password"]:hover, .form-default input[type="password"]:active, .form-default input[type="password"]:focus, .form-default input[type="search"]:hover, .form-default input[type="search"]:active, .form-default input[type="search"]:focus, .form-default textarea:hover, .form-default textarea:active, .form-default textarea:focus {
+      border-color: #44a0f8; }
+  .form-default textarea {
+    resize: none;
+    height: 108px;
+    border-radius: 16px;
+    -o-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -webkit-border-radius: 16px;
+    width: 100%;
+    font-family: Roboto, "Segoe UI", "open sans", arial, sans-serif; }
+  .form-default select {
+    cursor: pointer; }
+  .form-default select.multiple {
+    height: auto; }
+  .form-default input[type="submit"], .form-default input[type="reset"], .form-default button {
+    display: inline-block;
+    border: 0;
+    padding: 5px 8px;
+    font-size: 16px; }
+  .form-default input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    cursor: pointer;
+    display: block;
+    width: 8px;
+    color: #333;
+    text-align: center;
+    position: relative; }
+  .form-default input[type=number] {
+    -moz-appearance: textfield; }
+  .form-default small {
+    font-size: 12px;
+    text-transform: uppercase;
+    display: block;
+    line-height: 16px;
+    margin: -8px 0 8px;
+    color: #888; }
+  .form-default .button.form {
+    width: 100%;
+    margin: 8px 0; }
+  .form-default span.info {
+    display: block;
+    font-weight: 500;
+    line-height: 28px; }
+    .form-default span.info:last-child {
+      margin-bottom: 12px; }
 
 body {
   margin: 0;
@@ -197,14 +270,14 @@ body {
         left: 0;
         display: block;
         position: fixed; }
-  body ul.tab-header {
+  body ul.tab-header, body .tab-sub .tab-sub-header {
     margin: 0;
     position: absolute;
     top: 48px;
     left: 0;
     right: 0;
     padding: 0 16px; }
-    body ul.tab-header li {
+    body ul.tab-header li, body .tab-sub .tab-sub-header li {
       background-color: #dedede;
       display: inline-block;
       line-height: 32px;
@@ -221,12 +294,12 @@ body {
       -ms-border-radius: 4px 2px 0 0;
       -moz-border-radius: 4px 2px 0 0;
       -webkit-border-radius: 4px 2px 0 0; }
-      body ul.tab-header li.selected {
+      body ul.tab-header li.selected, body .tab-sub .tab-sub-header li.selected {
         background-color: #fafafa; }
-        body ul.tab-header li.selected::before {
+        body ul.tab-header li.selected::before, body .tab-sub .tab-sub-header li.selected::before {
           background-color: #fafafa;
           z-index: 1; }
-      body ul.tab-header li::before {
+      body ul.tab-header li::before, body .tab-sub .tab-sub-header li::before {
         border-radius: 0 2px 0 0;
         -o-border-radius: 0 2px 0 0;
         -ms-border-radius: 0 2px 0 0;
@@ -250,7 +323,7 @@ body {
         -ms-transform: skewX(18deg);
         transform: skewX(18deg);
         background-color: #dedede; }
-  body .tab-content {
+  body .tab-content, body .tab-sub .tab-sub-content {
     position: absolute;
     top: 80px;
     left: 0;
@@ -259,9 +332,16 @@ body {
     background-color: #fafafa;
     padding: 16px;
     overflow-y: auto; }
-    body .tab-content .tab {
+    body .tab-content .tab, body .tab-sub .tab-sub-content .tab {
       display: none; }
-      body .tab-content .tab.show {
+      body .tab-content .tab.show, body .tab-sub .tab-sub-content .tab.show {
         display: block; }
+  body .tab-sub {
+    position: relative;
+    width: 100%; }
+    body .tab-sub .tab-sub-header {
+      top: 0; }
+    body .tab-sub .tab-sub-content {
+      top: 32px; }
 
 /*# sourceMappingURL=main.css.map */

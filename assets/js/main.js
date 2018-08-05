@@ -28,4 +28,15 @@ $(document).ready(function () {
 			$('#'+which).addClass( 'show' )
 		}
 	});
+	// tab sub option
+	$( '.tab-sub-header li' ).click( function(){
+		var which = $(this).data('target');
+		if ( !$('#'+which).hasClass( 'show' ) )
+		{
+			$( '.tab-sub-header li' ).removeClass( 'selected' )
+			$(this).addClass( 'selected' )
+			$( '.tab-sub-content .tab' ).removeClass( 'show' )
+			$('#'+which).addClass( 'show' )
+		}
+	});
 });
