@@ -137,10 +137,8 @@ input[type="radio"], input[type="checkbox"], a {
     -webkit-border-radius: 16px;
     width: 100%;
     font-family: Roboto, "Segoe UI", "open sans", arial, sans-serif; }
-  .form-default select {
+  .form-default select, .form-default button {
     cursor: pointer; }
-  .form-default select.multiple {
-    height: auto; }
   .form-default input[type="submit"], .form-default input[type="reset"], .form-default button {
     display: inline-block;
     border: 0;
@@ -179,6 +177,11 @@ body {
   body header {
     position: relative; }
     body header .topbar {
+      box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.1), 0 4px 5px 0 rgba(0, 0, 0, 0.07), 0 1px 10px 0 rgba(0, 0, 0, 0.06);
+      -o-box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.1), 0 4px 5px 0 rgba(0, 0, 0, 0.07), 0 1px 10px 0 rgba(0, 0, 0, 0.06);
+      -ms-box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.1), 0 4px 5px 0 rgba(0, 0, 0, 0.07), 0 1px 10px 0 rgba(0, 0, 0, 0.06);
+      -moz-box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.1), 0 4px 5px 0 rgba(0, 0, 0, 0.07), 0 1px 10px 0 rgba(0, 0, 0, 0.06);
+      -webkit-box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.1), 0 4px 5px 0 rgba(0, 0, 0, 0.07), 0 1px 10px 0 rgba(0, 0, 0, 0.06);
       background-color: #44a0f8;
       position: fixed;
       width: 100%;
@@ -191,7 +194,7 @@ body {
         body header .topbar {
           padding-left: 8px; } }
       body header .topbar .logo {
-        width: 44px;
+        width: 120px;
         height: 44px;
         line-height: 44px;
         text-align: center;
@@ -219,12 +222,16 @@ body {
       -o-transition: all 0.3s ease;
       -ms-transition: all 0.3s ease;
       -moz-transition: all 0.3s ease;
-      -webkit-transition: all 0.3s ease; }
+      -webkit-transition: all 0.3s ease;
+      box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.1), 0 4px 5px 0 rgba(0, 0, 0, 0.07), 0 1px 10px 0 rgba(0, 0, 0, 0.06);
+      -o-box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.1), 0 4px 5px 0 rgba(0, 0, 0, 0.07), 0 1px 10px 0 rgba(0, 0, 0, 0.06);
+      -ms-box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.1), 0 4px 5px 0 rgba(0, 0, 0, 0.07), 0 1px 10px 0 rgba(0, 0, 0, 0.06);
+      -moz-box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.1), 0 4px 5px 0 rgba(0, 0, 0, 0.07), 0 1px 10px 0 rgba(0, 0, 0, 0.06);
+      -webkit-box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.1), 0 4px 5px 0 rgba(0, 0, 0, 0.07), 0 1px 10px 0 rgba(0, 0, 0, 0.06); }
       body header ul.popdown.show {
         position: absolute;
         top: 44px;
         background-color: #f0f7fe;
-        border-bottom: 1px solid #44a0f8;
         border-radius: 3px;
         -o-border-radius: 3px;
         -ms-border-radius: 3px;
@@ -241,12 +248,10 @@ body {
           vertical-align: top;
           padding: 0 8px; }
           body header ul.popdown li a i {
-            display: block;
             text-align: center;
             font-family: "Material Icons";
             font-weight: normal;
             font-style: normal;
-            font-size: 30px;
             line-height: 1;
             letter-spacing: normal;
             text-transform: none;
@@ -254,7 +259,9 @@ body {
             word-wrap: normal;
             direction: ltr;
             -moz-font-feature-settings: "liga";
-            -moz-osx-font-smoothing: grayscale; }
+            -moz-osx-font-smoothing: grayscale;
+            display: block;
+            font-size: 30px; }
           body header ul.popdown li a small {
             text-align: center;
             display: block; }
@@ -333,13 +340,10 @@ body {
     padding: 16px;
     overflow-y: auto; }
     body .tab-content .tab, body .tab-sub .tab-sub-content .tab {
-      display: none; }
+      display: none;
+      padding-bottom: 64px; }
       body .tab-content .tab.show, body .tab-sub .tab-sub-content .tab.show {
         display: block; }
-    body .tab-content.action, body .tab-sub .action.tab-sub-content {
-      padding-bottom: 64px; }
-      body .tab-content.action .tab-sub-content, body .tab-sub .action.tab-sub-content .tab-sub-content {
-        padding-bottom: 64px; }
   body .tab-sub {
     position: relative;
     width: 100%; }
@@ -355,8 +359,51 @@ body {
       body .tab-sub .tab-sub-header li::before {
         z-index: auto; }
     body .tab-sub .tab-sub-content {
-      position: relative;
       top: 34px;
-      bottom: 0px; }
+      overflow-y: visible; }
+
+.action {
+  text-align: right;
+  position: fixed;
+  bottom: 16px;
+  right: 32px; }
+  .action button {
+    border-radius: 16px;
+    -o-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -webkit-border-radius: 16px;
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+    -o-box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+    -ms-box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+    -moz-box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+    -webkit-box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+    float: right;
+    margin-left: 8px;
+    color: #fff;
+    padding: 4px 16px;
+    background-color: #75b9fa; }
+    .action button i {
+      text-align: center;
+      font-family: "Material Icons";
+      font-weight: normal;
+      font-style: normal;
+      line-height: 1;
+      letter-spacing: normal;
+      text-transform: none;
+      white-space: nowrap;
+      word-wrap: normal;
+      direction: ltr;
+      -moz-font-feature-settings: "liga";
+      -moz-osx-font-smoothing: grayscale;
+      line-height: 24px;
+      float: left;
+      margin-right: 4px; }
+    .action button:hover, .action button:active, .action button:focus {
+      background-color: #2b94f7; }
+    .action button.cancel {
+      background-color: #fab975; }
+      .action button.cancel:hover {
+        background-color: #f7942b; }
 
 /*# sourceMappingURL=main.css.map */

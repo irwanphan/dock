@@ -1,3 +1,26 @@
+// colors
+$black: #000
+$white: #fff
+$white-min: #fafafa
+$grey-light: #dedede
+$grey: #888
+$grey-dark: #2e2e2e
+$navy-lite: #a1decb
+$green: #11b622
+$blue: #44a0f8
+$orange: #f8a044
+$maroon: #db4c3f
+$shadow: 0 2px 4px -1px rgba(0, 0, 0, .2), 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12)
+$shadow-lite: 0 2px 4px -1px rgba(0, 0, 0, .1), 0 4px 5px 0 rgba(0, 0, 0, .07), 0 1px 10px 0 rgba(0, 0, 0, .06)
+
+$theme: $blue
+$ok: $theme
+$cancel: $orange
+$complementer-color: $green
+
+// font
+$font-family: Roboto, "Segoe UI", "open sans", arial, sans-serif
+
 // transitions & styling
 $browsers: '', '-o-', '-ms-', '-moz-', '-webkit-'
 =transitions ($sec)
@@ -13,15 +36,18 @@ $browsers: '', '-o-', '-ms-', '-moz-', '-webkit-'
 	@each $browser in $browsers
 		#{$browser}column-count: $columns
 		#{$browser}column-gap: $gap
-=squareicon ($size)
-	width: $size
-	height: $size
-	line-height: $size
-	text-align: center
 =clearfix
 	content: ""
 	display: block
 	clear: both
+=shadow($color: $shadow)
+	@each $browser in $browsers
+		#{$browser}box-shadow: $color
+=dimension($width, $height)
+	width: $width
+	height: $height
+	line-height: $height
+	text-align: center
 // set base container
 // responsive setting
 $responsive: true
@@ -32,27 +58,19 @@ $responsive: true
 	@else
 		width: $container-width
 	margin: 0px auto
-
-// colors
-$black: #000
-$white: #fff
-$white-min: #fafafa
-$grey-light: #dedede
-$grey: #888
-$grey-dark: #2e2e2e
-$orange: #da5f00
-$orange-lite: #f9dc85
-$navy-lite: #a1decb
-$green: #11b622
-$blue: #44a0f8
-$red: #d62323
-$maroon: #db4c3f
-
-$theme: $blue
-$complementer-color: $green
-
-// font
-$font-family: Roboto, "Segoe UI", "open sans", arial, sans-serif
+=materialicons
+	text-align: center
+	font-family: 'Material Icons'
+	font-weight: normal
+	font-style: normal
+	line-height: 1
+	letter-spacing: normal
+	text-transform: none
+	white-space: nowrap
+	word-wrap: normal
+	direction: ltr
+	-moz-font-feature-settings: 'liga'
+	-moz-osx-font-smoothing: grayscale
 
 // default styling
 *, *:before, *:after
@@ -146,10 +164,8 @@ input[type="radio"], input[type="checkbox"], a
 		+borderradius(16px)
 		width: 100%
 		font-family: $font-family
-	select
+	select, button
 		cursor: pointer
-	select.multiple
-		height: auto
 	input[type="submit"], input[type="reset"], button
 		display: inline-block
 		border: 0
@@ -187,6 +203,7 @@ body
 	header
 		position: relative
 		.topbar
+			+shadow($shadow-lite)
 			background-color: $theme
 			position: fixed
 			width: 100%
@@ -198,7 +215,7 @@ body
 			@media (min-width: 721px)
 				padding-left: 8px
 			.logo
-				+squareicon(44px)
+				+dimension(120px, 44px)
 				position: absolute
 				font-size: 24px
 				left: 4px
@@ -220,11 +237,12 @@ body
 			width: 100%
 			z-index: 8
 			+transitions(.3s)
+			+shadow($shadow-lite)
 			&.show
 				position: absolute
 				top: 44px
 				background-color: lighten($theme, 35%)
-				border-bottom: 1px solid $theme
+				// border-bottom: 1px solid $theme
 				+borderradius(3px)
 			li
 				width: auto
@@ -237,20 +255,9 @@ body
 					vertical-align: top
 					padding: 0 8px
 					i
+						+materialicons
 						display: block
-						text-align: center
-						font-family: 'Material Icons'
-						font-weight: normal
-						font-style: normal
 						font-size: 30px
-						line-height: 1
-						letter-spacing: normal
-						text-transform: none
-						white-space: nowrap
-						word-wrap: normal
-						direction: ltr
-						-moz-font-feature-settings: 'liga'
-						-moz-osx-font-smoothing: grayscale
 					small
 						text-align: center
 						display: block
@@ -316,16 +323,18 @@ body
 		right: 0
 		bottom: 0
 		background-color: $white-min
+		// padding: 16px 16px 64px
 		padding: 16px
 		overflow-y: auto
 		.tab
 			display: none
+			padding-bottom: 64px
 			&.show
 				display: block
-		&.action
-			padding-bottom: 64px
-			.tab-sub-content
-				padding-bottom: 64px
+		// &.action
+		// 	padding-bottom: 64px
+		// 	.tab-sub-content
+		// 		padding-bottom: 64px
 	.tab-sub
 		position: relative
 		width: 100%
@@ -344,7 +353,31 @@ body
 					z-index: auto
 		.tab-sub-content
 			@extend .tab-content
-			position: relative
+			// position: relative
 			top: 34px
-			bottom: 0px
-			*
+			overflow-y: visible
+.action
+	text-align: right
+	position: fixed
+	bottom: 16px
+	right: 32px
+	button
+		+borderradius(16px)
+		+shadow
+		float: right
+		margin-left: 8px
+		color: $white
+		padding: 4px 16px
+		background-color: lighten($theme, 10%)
+		i
+			+materialicons
+			line-height: 24px
+			float: left
+			margin-right: 4px 
+		&:hover, &:active, &:focus
+			background-color: darken($theme, 5%)
+		&.cancel
+			background-color: lighten($cancel, 10%)
+			&:hover
+				background-color: darken($cancel, 5%)
+				
