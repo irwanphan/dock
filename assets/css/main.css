@@ -328,7 +328,7 @@ body {
     top: 80px;
     left: 0;
     right: 0;
-    bottom: 44px;
+    bottom: 0;
     background-color: #fafafa;
     padding: 16px;
     overflow-y: auto; }
@@ -336,12 +336,27 @@ body {
       display: none; }
       body .tab-content .tab.show, body .tab-sub .tab-sub-content .tab.show {
         display: block; }
+    body .tab-content.action, body .tab-sub .action.tab-sub-content {
+      padding-bottom: 64px; }
+      body .tab-content.action .tab-sub-content, body .tab-sub .action.tab-sub-content .tab-sub-content {
+        padding-bottom: 64px; }
   body .tab-sub {
     position: relative;
     width: 100%; }
     body .tab-sub .tab-sub-header {
-      top: 0; }
+      top: 0;
+      border-bottom: 2px solid #75b9fa; }
+      body .tab-sub .tab-sub-header li.selected {
+        background-color: #75b9fa;
+        color: #fff; }
+        body .tab-sub .tab-sub-header li.selected::before {
+          background-color: #75b9fa;
+          z-index: 1; }
+      body .tab-sub .tab-sub-header li::before {
+        z-index: auto; }
     body .tab-sub .tab-sub-content {
-      top: 32px; }
+      position: relative;
+      top: 34px;
+      bottom: 0px; }
 
 /*# sourceMappingURL=main.css.map */

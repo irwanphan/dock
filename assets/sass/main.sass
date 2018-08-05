@@ -314,7 +314,7 @@ body
 		top: 80px
 		left: 0
 		right: 0
-		bottom: 44px
+		bottom: 0
 		background-color: $white-min
 		padding: 16px
 		overflow-y: auto
@@ -322,12 +322,29 @@ body
 			display: none
 			&.show
 				display: block
+		&.action
+			padding-bottom: 64px
+			.tab-sub-content
+				padding-bottom: 64px
 	.tab-sub
 		position: relative
 		width: 100%
 		.tab-sub-header
 			@extend ul.tab-header
 			top: 0
+			border-bottom: 2px solid lighten($theme, 10%)
+			li
+				&.selected
+					background-color: lighten($theme, 10%)
+					color: $white
+					&::before
+						background-color: lighten($theme, 10%)
+						z-index: 1
+				&::before
+					z-index: auto
 		.tab-sub-content
 			@extend .tab-content
-			top: 32px
+			position: relative
+			top: 34px
+			bottom: 0px
+			*
