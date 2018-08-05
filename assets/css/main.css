@@ -300,7 +300,7 @@ body {
       background-color: #dedede;
       display: inline-block;
       line-height: 32px;
-      padding: 0 8px;
+      padding: 0 24px 0 8px;
       cursor: pointer;
       position: relative;
       transition: all 0.3s ease;
@@ -360,7 +360,9 @@ body {
         margin-left: 4px;
         display: inline-block;
         z-index: 3;
-        position: absolute; }
+        position: absolute;
+        top: 4px;
+        right: 4px; }
   body .tab-content, body .tab-sub .tab-sub-content {
     position: absolute;
     top: 80px;
