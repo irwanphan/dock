@@ -101,6 +101,8 @@ input[type="radio"], input[type="checkbox"], a
 	display: none
 .clear
 	+clearfix
+.left
+	float: left
 .right
 	float: right
 .container-fluid
@@ -132,6 +134,17 @@ input[type="radio"], input[type="checkbox"], a
 		flex-basis: 0
 		flex-grow: 1
 		flex-shrink: 1
+	&-1-3
+		.column
+			&.left
+				width: 25%
+				padding-right: 16px
+			&.right
+				width: 75%
+				.tab-sub
+					position: relative
+					.tab-sub-header
+						position: relative
 // form styling
 .form-default
 	font-size: 16px
@@ -242,7 +255,6 @@ body
 				position: absolute
 				top: 44px
 				background-color: lighten($theme, 35%)
-				// border-bottom: 1px solid $theme
 				+borderradius(3px)
 			li
 				width: auto
@@ -263,7 +275,6 @@ body
 						display: block
 					&:hover, &:focus, &:active
 						color: darken($theme, 10%)
-
 		.screenout
 			display: none
 			z-index: 7
@@ -310,12 +321,19 @@ body
 				right: -5px
 				width: 10px
 				z-index: -1
-				// +transform(skewX, 18deg)
 				-webkit-transform: skewX(18deg)
 				-moz-transform: skewX(18deg)
 				-ms-transform: skewX(18deg)
 				transform: skewX(18deg)
 				background-color: $grey-light
+			i
+				+materialicons
+				line-height: 24px
+				height: 24px
+				margin-left: 4px
+				display: inline-block
+				z-index: 3
+				position: absolute
 	.tab-content
 		position: absolute
 		top: 80px
@@ -323,7 +341,6 @@ body
 		right: 0
 		bottom: 0
 		background-color: $white-min
-		// padding: 16px 16px 64px
 		padding: 16px
 		overflow-y: auto
 		.tab
@@ -331,13 +348,9 @@ body
 			padding-bottom: 64px
 			&.show
 				display: block
-		// &.action
-		// 	padding-bottom: 64px
-		// 	.tab-sub-content
-		// 		padding-bottom: 64px
 	.tab-sub
 		position: relative
-		width: 100%
+		// width: 100%
 		.tab-sub-header
 			@extend ul.tab-header
 			top: 0
@@ -353,14 +366,14 @@ body
 					z-index: auto
 		.tab-sub-content
 			@extend .tab-content
-			// position: relative
 			top: 34px
 			overflow-y: visible
-.action
+.fab
 	text-align: right
 	position: fixed
 	bottom: 16px
 	right: 32px
+.form-default
 	button
 		+borderradius(16px)
 		+shadow
@@ -368,7 +381,7 @@ body
 		margin-left: 8px
 		color: $white
 		padding: 4px 16px
-		background-color: lighten($theme, 10%)
+		background-color: lighten($theme, 5%)
 		i
 			+materialicons
 			line-height: 24px
@@ -377,7 +390,7 @@ body
 		&:hover, &:active, &:focus
 			background-color: darken($theme, 5%)
 		&.cancel
-			background-color: lighten($cancel, 10%)
+			background-color: lighten($cancel, 5%)
 			&:hover
 				background-color: darken($cancel, 5%)
 				

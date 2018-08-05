@@ -44,6 +44,9 @@ input[type="radio"], input[type="checkbox"], a {
   display: block;
   clear: both; }
 
+.left {
+  float: left; }
+
 .right {
   float: right; }
 
@@ -98,6 +101,15 @@ input[type="radio"], input[type="checkbox"], a {
     flex-basis: 0;
     flex-grow: 1;
     flex-shrink: 1; }
+  .columns-1-3 .column.left {
+    width: 25%;
+    padding-right: 16px; }
+  .columns-1-3 .column.right {
+    width: 75%; }
+    .columns-1-3 .column.right .tab-sub {
+      position: relative; }
+      .columns-1-3 .column.right .tab-sub .tab-sub-header {
+        position: relative; }
 
 .form-default {
   font-size: 16px; }
@@ -330,6 +342,25 @@ body {
         -ms-transform: skewX(18deg);
         transform: skewX(18deg);
         background-color: #dedede; }
+      body ul.tab-header li i, body .tab-sub .tab-sub-header li i {
+        text-align: center;
+        font-family: "Material Icons";
+        font-weight: normal;
+        font-style: normal;
+        line-height: 1;
+        letter-spacing: normal;
+        text-transform: none;
+        white-space: nowrap;
+        word-wrap: normal;
+        direction: ltr;
+        -moz-font-feature-settings: "liga";
+        -moz-osx-font-smoothing: grayscale;
+        line-height: 24px;
+        height: 24px;
+        margin-left: 4px;
+        display: inline-block;
+        z-index: 3;
+        position: absolute; }
   body .tab-content, body .tab-sub .tab-sub-content {
     position: absolute;
     top: 80px;
@@ -345,8 +376,7 @@ body {
       body .tab-content .tab.show, body .tab-sub .tab-sub-content .tab.show {
         display: block; }
   body .tab-sub {
-    position: relative;
-    width: 100%; }
+    position: relative; }
     body .tab-sub .tab-sub-header {
       top: 0;
       border-bottom: 2px solid #75b9fa; }
@@ -362,48 +392,49 @@ body {
       top: 34px;
       overflow-y: visible; }
 
-.action {
+.fab {
   text-align: right;
   position: fixed;
   bottom: 16px;
   right: 32px; }
-  .action button {
-    border-radius: 16px;
-    -o-border-radius: 16px;
-    -ms-border-radius: 16px;
-    -moz-border-radius: 16px;
-    -webkit-border-radius: 16px;
-    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
-    -o-box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
-    -ms-box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
-    -moz-box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
-    -webkit-box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
-    float: right;
-    margin-left: 8px;
-    color: #fff;
-    padding: 4px 16px;
-    background-color: #75b9fa; }
-    .action button i {
-      text-align: center;
-      font-family: "Material Icons";
-      font-weight: normal;
-      font-style: normal;
-      line-height: 1;
-      letter-spacing: normal;
-      text-transform: none;
-      white-space: nowrap;
-      word-wrap: normal;
-      direction: ltr;
-      -moz-font-feature-settings: "liga";
-      -moz-osx-font-smoothing: grayscale;
-      line-height: 24px;
-      float: left;
-      margin-right: 4px; }
-    .action button:hover, .action button:active, .action button:focus {
-      background-color: #2b94f7; }
-    .action button.cancel {
-      background-color: #fab975; }
-      .action button.cancel:hover {
-        background-color: #f7942b; }
+
+.form-default button {
+  border-radius: 16px;
+  -o-border-radius: 16px;
+  -ms-border-radius: 16px;
+  -moz-border-radius: 16px;
+  -webkit-border-radius: 16px;
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+  -o-box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+  -ms-box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+  -moz-box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+  -webkit-box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+  float: right;
+  margin-left: 8px;
+  color: #fff;
+  padding: 4px 16px;
+  background-color: #5dacf9; }
+  .form-default button i {
+    text-align: center;
+    font-family: "Material Icons";
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -moz-font-feature-settings: "liga";
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 24px;
+    float: left;
+    margin-right: 4px; }
+  .form-default button:hover, .form-default button:active, .form-default button:focus {
+    background-color: #2b94f7; }
+  .form-default button.cancel {
+    background-color: #f9ac5d; }
+    .form-default button.cancel:hover {
+      background-color: #f7942b; }
 
 /*# sourceMappingURL=main.css.map */
