@@ -1,0 +1,50 @@
+// transitions & styling
+$browsers: '', '-o-', '-ms-', '-moz-', '-webkit-'
+=transitions ($sec)
+	@each $browser in $browsers
+		#{$browser}transition: all $sec ease
+=borderradius ($radius: 50%)
+	@each $browser in $browsers
+		#{$browser}border-radius: $radius
+// =transform ($type, $value)
+// 	@each $browser in $browsers
+// 		#{$browser}transform: #{$type}(#{$value})
+=columns ($columns: 4, $gap: 16px)
+	@each $browser in $browsers
+		#{$browser}column-count: $columns
+		#{$browser}column-gap: $gap
+=clearfix
+	content: ""
+	display: block
+	clear: both
+=shadow($color: $shadow)
+	@each $browser in $browsers
+		#{$browser}box-shadow: $color
+=dimension($width, $height)
+	width: $width
+	height: $height
+	line-height: $height
+	text-align: center
+// set base container
+// responsive setting
+$responsive: true
+=container($container-width: $width)
+	// set container width if responsive, else if not
+	@if $responsive == true
+		max-width: $container-width
+	@else
+		width: $container-width
+	margin: 0px auto
+=materialicons
+	text-align: center
+	font-family: 'Material Icons'
+	font-weight: normal
+	font-style: normal
+	line-height: 1
+	letter-spacing: normal
+	text-transform: none
+	white-space: nowrap
+	word-wrap: normal
+	direction: ltr
+	-moz-font-feature-settings: 'liga'
+	-moz-osx-font-smoothing: grayscale

@@ -1,0 +1,86 @@
+ul.tab-header
+	margin: 0
+	position: absolute
+	top: 48px
+	left: 0
+	right: 0
+	padding: 0 16px
+	li
+		background-color: $grey-light
+		display: inline-block
+		line-height: 32px
+		padding: 0 24px 0 8px
+		cursor: pointer
+		position: relative
+		+transitions(.3s)
+		+borderradius(4px 2px 0 0)
+		&.selected
+			background-color: $white-min
+			&::before
+				background-color: $white-min
+				z-index: 1
+		&::before
+			+borderradius(0 2px 0 0)
+			border-right-style: solid
+			border-right-width: 1px
+			border-top-style: solid
+			border-top-width: 1px
+			border-right-color: transparent
+			border-top-color: transparent
+			content: " "
+			display: block
+			height: 32px
+			position: absolute
+			right: -5px
+			width: 10px
+			z-index: -1
+			-webkit-transform: skewX(18deg)
+			-moz-transform: skewX(18deg)
+			-ms-transform: skewX(18deg)
+			transform: skewX(18deg)
+			background-color: $grey-light
+		i
+			+materialicons
+			line-height: 24px
+			height: 24px
+			margin-left: 4px
+			display: inline-block
+			z-index: 3
+			position: absolute
+			top: 4px
+			right: 4px
+.tab-content
+	position: absolute
+	top: 80px
+	left: 0
+	right: 0
+	bottom: 0
+	background-color: $white-min
+	padding: 16px
+	overflow-y: auto
+	.tab
+		display: none
+		padding-bottom: 64px
+		@extend .form-default
+		&.show
+			display: block
+.tab-sub
+	position: relative
+	// width: 100%
+	.tab-sub-header
+		@extend ul.tab-header
+		top: 0
+		border-bottom: 2px solid lighten($theme, 10%)
+		li
+			&.selected
+				background-color: lighten($theme, 10%)
+				color: $white
+				&::before
+					background-color: lighten($theme, 10%)
+					z-index: 1
+			&::before
+				z-index: auto
+	.tab-sub-content
+		@extend .tab-content
+		top: 34px
+		overflow-y: visible
