@@ -6,7 +6,7 @@ ul.tab-header
 	right: 0
 	padding: 0 16px
 	li
-		background-color: $grey-light
+		background-color: lighten($grey-light, 5%)
 		display: inline-block
 		line-height: 32px
 		padding: 0 24px 0 8px
@@ -14,12 +14,18 @@ ul.tab-header
 		position: relative
 		+transitions(.3s)
 		+borderradius(4px 2px 0 0)
+		&:hover, &:active, &:focus
+			background-color: lighten($blue, 25%)
+			&::before
+				background-color: lighten($blue, 25%)
+				z-index: 2
 		&.selected
 			background-color: $white-min
 			&::before
 				background-color: $white-min
-				z-index: 1
+				z-index: 2
 		&::before
+			+transitions(.3s)
 			+borderradius(0 2px 0 0)
 			border-right-style: solid
 			border-right-width: 1px
@@ -33,12 +39,12 @@ ul.tab-header
 			position: absolute
 			right: -5px
 			width: 10px
-			z-index: -1
+			z-index: 1
 			-webkit-transform: skewX(18deg)
 			-moz-transform: skewX(18deg)
 			-ms-transform: skewX(18deg)
 			transform: skewX(18deg)
-			background-color: $grey-light
+			background-color: lighten($grey-light, 5%)
 		i
 			+materialicons
 			line-height: 24px

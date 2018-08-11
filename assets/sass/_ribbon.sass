@@ -1,5 +1,9 @@
 header
 	position: relative
+	i
+		+materialicons
+		display: block
+		font-size: 30px
 	.topbar
 		+shadow($shadow-lite)
 		background-color: $theme
@@ -11,7 +15,7 @@ header
 		top: 0
 		z-index: 11
 		@media (min-width: 721px)
-			padding-left: 8px
+			padding: 0 16px
 		.logo
 			+dimension(120px, 44px)
 			position: absolute
@@ -20,12 +24,19 @@ header
 			display: none
 		.nav-menu
 			color: $white
+			display: inline-block
+			&:last-child
+				float: right
 			.nav-item
 				line-height: 44px
 				height: 44px
 				padding: 0 8px
 				display: inline-block
 				font-weight: 500
+			i
+				display: inline-flex !important
+				vertical-align: middle
+				margin-top: -6px
 	ul.popdown
 		position: absolute
 		top: -300px
@@ -51,10 +62,6 @@ header
 				display: inline-block
 				vertical-align: top
 				padding: 0 8px
-				i
-					+materialicons
-					display: block
-					font-size: 30px
 				small
 					text-align: center
 					display: block

@@ -13,7 +13,8 @@ $font-family: Roboto, "Segoe UI", "open sans", arial, sans-serif
 	box-sizing: border-box
 html, body
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0)
-	font-family: $font-family
+	font-family: $font-family !important
+	color: $grey-dark !important
 a
 	text-decoration: none
 	color: inherit
@@ -66,7 +67,7 @@ input[type="radio"], input[type="checkbox"], a
 	right: 32px	
 body
 	margin: 0
-	background-color: $grey
+	background-color: lighten($grey, 22%) !important
 	
 	
 
