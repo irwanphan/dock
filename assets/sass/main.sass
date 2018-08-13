@@ -48,17 +48,29 @@ input[type="radio"], input[type="checkbox"], a
 	// +container(1020px)
 	position: relative
 .button
-	+borderradius(5px)
+	+borderradius(4px)
 	text-align: center
 	display: block
-	// padding: 8px
+	padding: 4px 16px
 	border: 1px solid white
 	&.theme
 		color: $white
-		background-color: lighten($theme, 10%)
-		&:hover
-			color: $theme
-			background-color: lighten($theme, 25%)
+		background-color: lighten($theme, 5%)
+		&:hover, &:active, &:focus
+			color: $white
+			background-color: darken($theme, 5%)
+	&.ok
+		color: $white
+		background-color: lighten($ok, 5%)
+		&:hover, &:active, &:focus
+			color: $white
+			background-color: darken($ok, 5%)
+	&.cancel, &.delete
+		color: $white
+		background-color: lighten($cancel, 5%)
+		&:hover, &:active, &:focus
+			color: $white
+			background-color: darken($cancel, 5%)
 
 .fab
 	text-align: right
@@ -69,7 +81,13 @@ body
 	margin: 0
 	background-color: lighten($grey, 22%) !important
 	
-	
-
-	
-				
+// VOYAGER FIX
+table
+	button
+		float: right
+.modal-content
+	padding: 16px
+	.modal-header
+		text-align: center
+		font-size: 20px
+		font-weight: 500
